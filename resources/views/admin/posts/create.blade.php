@@ -46,58 +46,70 @@
                                         <h1>{{trans("pages.add new post")}}</h1>
                                     </div>
                                     <div class="row">
-                                        <div class="col-lg-12">
+                                        <div class="col-12">
                                             <div class="bg-gray-200 p-4">
+                                                <div class="row">
 
-                                                <div class="ar_button form-control btn btn-info text-left">{{trans("pages.add content in arabic")}} <span class="mdi mdi-arrow-down-drop-circle mdi-36px"></span></div><br>
-                                                <div class="ar">
-                                                    <div class="form-group">
-                                                        <div class="main-content-label mg-b-5">
-                                                            {{trans("pages.title_ar")}}
+                                                    <div class="col-6 ar_button  btn btn-secondary ">{{trans("pages.add content in arabic")}} <span class="mdi mdi-arrow-down-drop-circle mdi-36px"></span></div><br>
+                                                    <div class="col-6 en_button  btn btn-secondary ">{{trans("pages.add content in english")}} <span class="mdi mdi-arrow-down-drop-circle mdi-36px"></span></div><br>
+
+                                                    <div class= "col-6">
+                                                        <br>
+                                                        <div class="ar">
+                                                            <div class="form-group">
+                                                                <div class="main-content-label mg-b-5">
+                                                                    {{trans("pages.title_ar")}}
+                                                                </div>
+                                                                <input class="form-control" name="title" placeholder="Enter Title"  type="text">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="main-content-label mg-b-5">
+                                                                    {{trans("pages.summary_ar")}}
+                                                                </div>
+                                                                <textarea class="form-control" name="summary"></textarea>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="main-content-label mg-b-5">
+                                                                    {{trans("pages.body_ar")}}
+                                                                </div>
+                                                                <textarea id="editor" name="body"></textarea>
+                                                            </div>
                                                         </div>
-                                                        <input class="form-control" name="title" placeholder="Enter Title"  type="text">
                                                     </div>
-                                                    <div class="form-group">
-                                                        <div class="main-content-label mg-b-5">
-                                                            {{trans("pages.summary_ar")}}
+
+                                                    <div class="col-6">
+                                                        <br>
+                                                        <div class="en">
+                                                            <div class="form-group">
+                                                                <div class="main-content-label mg-b-5">
+                                                                    {{trans("pages.title_en")}}
+                                                                </div>
+                                                                <input class="form-control" name="title_en" placeholder="Enter Title"  type="text">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="main-content-label mg-b-5">
+                                                                    {{trans("pages.summary_en")}}
+                                                                </div>
+                                                                <textarea class="form-control" name="summary_en"></textarea>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="main-content-label mg-b-5">
+                                                                    {{trans("pages.body_en")}}
+                                                                </div>
+                                                                <textarea id="editor" name="body_en"></textarea>
+                                                            </div>
                                                         </div>
-                                                        <textarea class="form-control" name="summary"></textarea>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <div class="main-content-label mg-b-5">
-                                                            {{trans("pages.body_ar")}}
-                                                        </div>
-                                                        <textarea id="editor" name="body"></textarea>
-                                                    </div>
+
                                                 </div>
 
-                                                <div class="en_button form-control btn btn-info text-left">{{trans("pages.add content in english")}} <span class="mdi mdi-arrow-down-drop-circle mdi-36px"></span></div><br>
-                                                <div class="en">
-                                                    <div class="form-group">
-                                                        <div class="main-content-label mg-b-5">
-                                                            {{trans("pages.title_en")}}
-                                                        </div>
-                                                        <input class="form-control" name="title_en" placeholder="Enter Title"  type="text">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <div class="main-content-label mg-b-5">
-                                                            {{trans("pages.summary_en")}}
-                                                        </div>
-                                                        <textarea class="form-control" name="summary_en"></textarea>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <div class="main-content-label mg-b-5">
-                                                            {{trans("pages.body_en")}}
-                                                        </div>
-                                                        <textarea id="editor" name="body_en"></textarea>
-                                                    </div>
-                                                </div>
 
+                                                <br>
                                                 <div class="form-group">
                                                     <div class="main-content-label mg-b-5">
                                                         {{trans("pages.categories")}}
                                                     </div>
-                                                    <select class="form-control" name="category_id[]" multiple>
+                                                    <select class="form-control" name="category_id" >
                                                         @foreach ($categories as $category)
                                                             <option value="{{$category->id}}">{{$category->name}}</option>
                                                         @endforeach
@@ -107,7 +119,7 @@
                                                     <div class="main-content-label mg-b-5">
                                                         {{trans("pages.tags")}}
                                                     </div>
-                                                    <select class="form-control"  name="tag_id[]" multiple>
+                                                    <select class="form-control"  name="tag_id">
                                                         @foreach ($tags as $tag)
                                                             <option value="{{$tag->id}}">{{$tag->name}}</option>
                                                         @endforeach

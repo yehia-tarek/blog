@@ -180,7 +180,7 @@ Dashboard
 <script src="{{URL::asset('assets/js/dashboard.sampledata.js')}}"></script>
 <script src="{{URL::asset('assets/js/chart.flot.sampledata.js')}}"></script>
 <!--Internal Apexchart js-->
-<script src="{{URL::asset('assets/js/apexcharts.js')}}"></script>
+{{-- <script src="{{URL::asset('assets/js/apexcharts.js')}}"></script> --}}
 <!-- Internal Map -->
 <script src="{{URL::asset('assets/plugins/jqvmap/jquery.vmap.min.js')}}"></script>
 <script src="{{URL::asset('assets/plugins/jqvmap/maps/jquery.vmap.usa.js')}}"></script>

@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('post_tag', function (Blueprint $table) {
+        Schema::create('category_post', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('post_id');
-            $table->unsignedBigInteger('tag_id');
+            $table->unsignedBigInteger('category_id');
 
             $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
-            $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
 
-            $table->unique(['post_id', 'tag_id']); // Ensuring uniqueness of post_id and tag_id combination
+            $table->unique(['post_id', 'category_id']); // Ensuring uniqueness of post_id and tag_id combination
         });
     }
 
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('post_tag');
+        Schema::dropIfExists('post_category');
     }
 };
