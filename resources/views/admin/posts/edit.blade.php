@@ -45,52 +45,63 @@
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="bg-gray-200 p-4">
+                                                <div class="row">
 
-                                                <div class="ar_button form-control btn btn-info text-left">{{trans("pages.add content in arabic")}} <span class="mdi mdi-arrow-down-drop-circle mdi-36px"></span></div><br>
-                                                <div class="ar">
-                                                    <div class="form-group">
-                                                        <div class="main-content-label mg-b-5">
-                                                            {{trans("pages.title_ar")}}
-                                                        </div>
-                                                        <input class="form-control" name="title" placeholder="Enter Title" value="{{$post->getTranslation('title', 'ar')}}"  type="text">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <div class="main-content-label mg-b-5">
-                                                            {{trans("pages.summary_ar")}}
-                                                        </div>
-                                                        <textarea class="form-control"  name="summary">{{$post->getTranslation('summary', 'ar')}}</textarea>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <div class="main-content-label mg-b-5">
-                                                            {{trans("pages.body_ar")}}
-                                                        </div>
-                                                        <textarea id="editor" name="body">{!! html_entity_decode($post->getTranslation('body', 'ar'))!!}</textarea>
+                                                    <div class="ar_button form-control btn btn-info col-6">{{trans("pages.add content in arabic")}} <span class="mdi mdi-arrow-down-drop-circle mdi-36px"></span></div><br>
+                                                    <div class="en_button form-control btn btn-info col-6">{{trans("pages.add content in english")}} <span class="mdi mdi-arrow-down-drop-circle mdi-36px"></span></div><br>
+                                                    <div class="col-6">
+                                                        <div class="ar">
+                                                            <br>
+                                                            <div class="form-group">
+                                                                <div class="main-content-label mg-b-5">
+                                                                    {{trans("pages.title_ar")}}
+                                                                </div>
+                                                                <input class="form-control" name="title" placeholder="Enter Title" value="{{$post->getTranslation('title', 'ar')}}"  type="text">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="main-content-label mg-b-5">
+                                                                    {{trans("pages.summary_ar")}}
+                                                                </div>
+                                                                <textarea class="form-control"  name="summary">{{$post->getTranslation('summary', 'ar')}}</textarea>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="main-content-label mg-b-5">
+                                                                    {{trans("pages.body_ar")}}
+                                                                </div>
+                                                                <textarea id="editor" name="body">{!! html_entity_decode($post->getTranslation('body', 'ar'))!!}</textarea>
 
+                                                            </div>
+                                                        </div>
                                                     </div>
+
+                                                    <div class="col-6">
+                                                        <div class="en">
+                                                            <br>
+                                                            <div class="form-group">
+                                                                <div class="main-content-label mg-b-5">
+                                                                    {{trans("pages.title_en")}}
+                                                                </div>
+                                                                <input class="form-control" name="title_en" placeholder="Enter Title" value="{{$post->getTranslation('title', 'en')}}"  type="text">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="main-content-label mg-b-5">
+                                                                    {{trans("pages.summary_en")}}
+                                                                </div>
+                                                                <textarea class="form-control"  name="summary_en">{{$post->getTranslation('summary', 'en')}}</textarea>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="main-content-label mg-b-5">
+                                                                    {{trans("pages.body_en")}}
+                                                                </div>
+                                                                <textarea id="editor" name="body_en">{!! html_entity_decode($post->getTranslation('body', 'en'))!!}</textarea>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
                                                 </div>
 
-                                                <div class="en_button form-control btn btn-info text-left">{{trans("pages.add content in english")}} <span class="mdi mdi-arrow-down-drop-circle mdi-36px"></span></div><br>
-                                                <div class="en">
-                                                    <div class="form-group">
-                                                        <div class="main-content-label mg-b-5">
-                                                            {{trans("pages.title_en")}}
-                                                        </div>
-                                                        <input class="form-control" name="title_en" placeholder="Enter Title" value="{{$post->getTranslation('title', 'en')}}"  type="text">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <div class="main-content-label mg-b-5">
-                                                            {{trans("pages.summary_en")}}
-                                                        </div>
-                                                        <textarea class="form-control"  name="summary_en">{{$post->getTranslation('summary', 'en')}}</textarea>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <div class="main-content-label mg-b-5">
-                                                            {{trans("pages.body_en")}}
-                                                        </div>
-                                                        <textarea id="editor" name="body_en">{!! html_entity_decode($post->getTranslation('body', 'en'))!!}</textarea>
 
-                                                    </div>
-                                                </div>
 
                                                 <div class="form-group">
                                                     <div>
